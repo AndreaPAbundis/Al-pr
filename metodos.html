@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Andrea Palma</title>
+  <link rel="icon" type="image/png" href="https://dummyimage.com/64x64/000/fff" sizes="64x64">
+  <link rel="icon" type="image/png" href="https://dummyimage.com/180x180/000/fff" sizes="180x180">
+  <!-- [#TODO] Dont forget to update the FAVICON IMAGES in the next route -->
+  <!-- <link rel="icon" type="image/png" href="assets/images/favicon-180x180.png" sizes="128x128"> -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css" integrity="sha256-K3Njjl2oe0gjRteXwX01fQD5fkk9JFFBdUHy/h38ggY=" crossorigin="anonymous" rel="stylesheet">
+  <link href="./assets/styles/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/swiper/swiper/dist/css/swiper.min.css">
+</head>
+
+<body>
+  <!--  Header  -->
+  <div class="header-container">
+    <header class="main-nav">
+      <nav role="navigation" class="navbar">
+        <ul>
+          <a href="index.html">
+            <li class="space-options"><img src="https://dummyimage.com/200x50/000/fff"></li>
+          </a>
+          <a href="estructuras.html">
+            <li class="space-options">Estructuras |</li>
+          </a>
+          <a href="uniones.html">
+            <li class="space-options">Uniones |</li>
+          </a>
+          <a href="metodos.html">
+            <li class="space-options">Metodos de ordenamiento |</li>
+          </a>
+          <a href="listas.html">
+            <li class="space-options">Listas enlazadas |</li>
+          </a>
+        </ul>
+      </nav>
+    </header>
+  </div>
+  <!--  Hero -->
+<!--Slider-->
+  <style>
+    html, body {
+      position: relative;
+      height: 100%;
+    }
+    .swiper-container {
+      width: 100%;
+      height: 95%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+  </style>
+</head>
+  <!-- Swiper -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+      <div class="swiper-slide">Slide 4</div>
+      <div class="swiper-slide">Slide 5</div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="assets/swiper/swiper/dist/js/swiper.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+
+  <!--  Main content -->
+  <main class="j-workspace ">
+    <div class="j-wrap">
+
+    </div>
+  </main>
+  <footer>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="assets/scripts/ripple.js"></script>
+  <script src="assets/scripts/header.js"></script>
+
+</body>
+</html>
