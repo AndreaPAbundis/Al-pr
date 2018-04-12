@@ -837,16 +837,11 @@ footer {
     text-transform: capitalize;
     margin-top: 32px;
     margin-bottom: 32px; }
-  .content .pre {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 12px 0 10px;
-    font-size: 0,9em; }
   .content .h p {
     color: white; }
   .content pre {
     background-color: #dcdcdc;
-    padding-top: 8px; }
+    width: 100%; }
 
 #metodos .img {
   display: flex;

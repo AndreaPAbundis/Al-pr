@@ -11,9 +11,6 @@
     margin-top: $space-4;
     margin-bottom: $space-4;
   }
-  .pre{
-    border:1px solid #ccc;padding:10px;margin:12px 0 10px;font-size:0,9em;
-  }
   .h{
     p{
       color: white;
@@ -21,7 +18,7 @@
   }
   pre{
     background-color: #dcdcdc;
-    padding-top: $space-base;
+    width: 100%;
   }
 }
 
