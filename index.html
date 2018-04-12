@@ -22,7 +22,7 @@
       <nav role="navigation" class="navbar">
         <ul>
           <a href="index.html">
-            <li class="space-options"><img src="https://dummyimage.com/200x50/000/fff"></li>
+            <li class="space-options"><img src="assets/images/logo.png"></li>
           </a>
           <a href="#estructur">
             <li class="space-options">Estructuras |</li>
@@ -51,14 +51,16 @@
     }
     .swiper-container {
       width: 100%;
-      height: 95%;
+      height: 60%;
       margin-left: auto;
       margin-right: auto;
+      background-color: #48D1CC;
     }
     .swiper-slide {
       text-align: center;
-      font-size: 18px;
-      background: #fff;
+      font-size: 30px;
+      background: #48D1CC;
+      color: #fff;
       /* Center slide text vertically */
       display: -webkit-box;
       display: -ms-flexbox;
@@ -78,11 +80,9 @@
   <!-- Swiper -->
   <div class="swiper-container">
     <div class="swiper-wrapper">
-      <div class="swiper-slide">Slide 1</div>
-      <div class="swiper-slide">Slide 2</div>
-      <div class="swiper-slide">Slide 3</div>
-      <div class="swiper-slide">Slide 4</div>
-      <div class="swiper-slide">Slide 5</div>
+      <div class="swiper-slide">Algoritmos y estructura de datos<br>Parcial 2</div>
+      <div class="swiper-slide">Mestra.<br>Emma Fabiola</div>
+      <div class="swiper-slide">Andrea Lizbeth Palma Abundis<br>2P2<br>17310232</div>
     </div>
     <!-- Add Pagination -->
     <div class="swiper-pagination"></div>
@@ -286,7 +286,65 @@
         </pre>
         <hr>
       </div>
+    <div class="content" id="metodos">
+      <a name="metodos" id="metodos">
+        <p style="color:white;">sfdsdf</p>
+      </a>
+      <h1>Métodos de ordenamiento.</h1>
+      <h2>Burbuja.</h2>
+      <p>Es un sencillo algoritmo de ordenamiento. Funciona revisando cada elemento de la lista que va a ser ordenada con el siguiente, intercambiándolos de posición si están en el orden equivocado. Es necesario revisar varias veces toda la lista hasta que no se necesiten más intercambios, lo cual significa que la lista está ordenada. Este algoritmo obtiene su nombre de la forma con la que suben por la lista los elementos durante los intercambios, como si fueran pequeñas "burbujas". También es conocido como el método del intercambio directo. Dado que solo usa comparaciones para operar elementos, se lo considera un algoritmo de comparación, siendo uno de los más sencillo de implementar.
+      </p>
+      <div class="img"><img src="assets/images/burbuja.gif"></div>
+      <h2>Inserción</h2>
+      <p>Inicialmente se tiene un solo elemento, que obviamente es un conjunto ordenado. Después, cuando hay k elementos ordenados de menor a mayor, se toma el elemento k+1 y se compara con todos los elementos ya ordenados, deteniéndose cuando se encuentra un elemento menor (todos los elementos mayores han sido desplazados una posición a la derecha) o cuando ya no se encuentran elementos (todos los elementos fueron desplazados y este es el más pequeño). En este punto se inserta el elemento k+1 debiendo desplazarse los demás elementos.
+      </p>
+      <div class="img"><img src="assets/images/insercion.gif"></div>
+      <h2>Selección</h2>
+      <p>
+        1.Buscar el mínimo elemento de la lista<br>
+        2.Intercambiarlo con el primero<b3>
+        3.Buscar el siguiente mínimo en el resto de la lista<br>
+        4.Intercambiarlo con el segundo<br>
+        Y en general:<br>
+        -Buscar el mínimo elemento entre una posición i y el final de la lista
+        <br>-Intercambiar el mínimo con el elemento de la posición i
+      </p>
+      <div class="img"><img src="assets/images/seleccion.gif"></div>
+      <h2>Shell</h2>
+      <p>El algoritmo Shell es una mejora de la ordenación por inserción, donde se van comparando elementos distantes, al tiempo que se los intercambian si corresponde. A medida que se aumentan los pasos, el tamaño de los saltos disminuye; por esto mismo, es útil tanto como si los datos desordenados se encuentran cercanos, o lejanos.
+      <br>
+      Es bastante adecuado para ordenar listas de tamaño moderado, debido a que su velocidad es aceptable y su codificación es bastante sencilla. Su velocidad depende de la secuencia de valores con los cuales trabaja, ordenándolos.El siguiente ejemplo muestra el proceso de forma gráfica:<br>
+      Considerando un valor pequeño que está inicialmente almacenado en el final del vector. Usando un ordenamiento O(n2) como el ordenamiento de burbuja o el ordenamiento por inserción, tomará aproximadamente n comparaciones e intercambios para mover este valor hacia el otro extremo del vector.
+      <br>
+      El Shell sort primero mueve los valores usando tamaños de espacio gigantes, de manera que un valor pequeño se moverá bastantes posiciones hacia su posición final, con sólo unas pocas comparaciones e intercambios.
+      </p>
+      <div class="img"><img src="assets/images/shell.jpg"></div>
     </div>
+    <div class="content" id="listas">
+      <a name="listas" id="listas">
+        <p style="color:white;">sfdsdf</p>
+      </a>
+      <h1>Listas enlazadas</h1>
+      <h2>Definicion</h2>
+      <p>Una lista enlazada es una de las estructuras de datos fundamentales, y puede ser usada para implementar otras estructuras de datos. Consiste en una secuencia de nodos, en los que se guardan campos de datos arbitrarios y una o dos referencias, enlaces o punteros al nodo anterior o posterior. El principal beneficio de las listas enlazadas respecto a los vectores convencionales es que el orden de los elementos enlazados puede ser diferente al orden de almacenamiento en la memoria o el disco, permitiendo que el orden de recorrido de la lista sea diferente al de almacenamiento.
+      </p>
+      <h2 style="text-align: center;">Tipos de listas enlazadas</h2>
+      <h3>Listas simples enlazadas</h3>
+      <p>Es una lista enlazada de nodos, donde cada nodo tiene un único campo de enlace. Una variable de referencia contiene una referencia al primer nodo, cada nodo (excepto el último) enlaza con el nodo siguiente, y el enlace del último nodo contiene NULL para indicar el final de la lista. Aunque normalmente a la variable de referencia se la suele llamar top, se le podría llamar como se desee.
+      </p>
+      <h3>Listas doblemente enlazadas</h3>
+      <p>Un tipo de lista enlazada más sofisticado es la lista doblemente enlazada o lista enlazadas de dos vías. Cada nodo tiene dos enlaces: uno apunta al nodo anterior, o apunta al valor NULL si es el primer nodo; y otro que apunta al nodo siguiente, o apunta al valor NULL si es el último nodo.<br>
+      En algún lenguaje de muy bajo nivel, XOR-Linking ofrece una vía para implementar listas doblemente enlazadas, usando una sola palabra para ambos enlaces, aunque esta técnica no se suele utilizar.
+      <h3>Listas enlazadas circulares</h3>
+      <p>En una lista enlazada circular, el primer y el último nodo están unidos juntos. Esto se puede hacer tanto para listas enlazadas simples como para las doblemente enlazadas. Para recorrer una lista enlazada circular podemos empezar por cualquier nodo y seguir la lista en cualquier dirección hasta que se regrese hasta el nodo original. Desde otro punto de vista, las listas enlazadas circulares pueden ser vistas como listas sin comienzo ni fin. Este tipo de listas es el más usado para dirigir buffers para “ingerir” datos, y para visitar todos los nodos de una lista a partir de uno dado.
+      </p>
+      <h3>Listas enlazadas simples circulares</h3>
+      <p>Cada nodo tiene un enlace, similar al de las listas enlazadas simples, excepto que el siguiente nodo del último apunta al primero. Como en una lista enlazada simple, los nuevos nodos pueden ser solo eficientemente insertados después de uno que ya tengamos referenciado. Por esta razón, es usual quedarse con una referencia solamente al último elemento en una lista enlazada circular simple, esto nos permite rápidas inserciones al principio, y también permite accesos al primer nodo desde el puntero del último nodo.
+      </p>
+      <h3>Listas enlazadas doblemente circulares</h3>
+      <p>En una lista enlazada doblemente circular, cada nodo tiene dos enlaces, similares a los de la lista doblemente enlazada, excepto que el enlace anterior del primer nodo apunta al último y el enlace siguiente del último nodo, apunta al primero. Como en una lista doblemente enlazada, las inserciones y eliminaciones pueden ser hechas desde cualquier punto con acceso a algún nodo cercano. Aunque estructuralmente una lista circular doblemente enlazada no tiene ni principio ni fin, un puntero de acceso externo puede establecer el nodo apuntado que está en la cabeza o al nodo cola, y así mantener el orden tan bien como en una lista doblemente enlazada.
+      </p>
+  </div>
   </main>
   <footer>
   </footer>

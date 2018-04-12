@@ -569,7 +569,7 @@ body {
 
 .header-container {
   position: fixed;
-  background-color: #48D1CC;
+  background-color: #fff;
   width: 100%;
   z-index: 1000;
   top: 0;
@@ -581,7 +581,7 @@ body {
       padding-left: 16px;
       padding-right: 0;
       font-weight: bold;
-      color: #ffffff;
+      color: #000000;
       font-size: 18px; }
     .header-container .navbar .space-options:hover {
       color: #6495ED; }
@@ -600,8 +600,8 @@ header.main-nav {
   padding-right: 16px;
   padding-left: 16px;
   margin: 0 auto;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 0;
+  padding-bottom: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -833,8 +833,10 @@ footer {
   .content h1 {
     text-transform: capitalize;
     margin-top: 64px; }
-  .content h2 {
-    text-transform: capitalize; }
+  .content h2, .content h3 {
+    text-transform: capitalize;
+    margin-top: 32px;
+    margin-bottom: 32px; }
   .content .pre {
     border: 1px solid #ccc;
     padding: 10px;
@@ -842,5 +844,13 @@ footer {
     font-size: 0,9em; }
   .content .h p {
     color: white; }
+  .content pre {
+    background-color: #dcdcdc;
+    padding-top: 8px; }
+
+#metodos .img {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
 
 /*# sourceMappingURL=main.css.map */
