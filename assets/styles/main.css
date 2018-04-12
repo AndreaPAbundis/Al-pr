@@ -840,6 +840,7 @@ footer {
   .content .h p {
     color: white; }
   .content pre {
+    padding-top: 8px;
     background-color: #f6f6f6;
     width: 100%; }
 
