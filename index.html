@@ -135,51 +135,51 @@
         <p>Tipo de dato compuesto que puede almacenar distintos tipos de datos</p>
         <h2>Sintaxis</h2>
         <pre class="pre1">
-           struct [nombre_estructura] {
-           [tipo][miembro1]
-           [tipo][miembro2]
-           [tipo][miembro3]
-           }[NombreVariable];
+  struct [nombre_estructura] {
+  [tipo][miembro1]
+  [tipo][miembro2]
+  [tipo][miembro3]
+  }[NombreVariable];
        </pre>
         <p> <strong>struct</strong>:  es una palabra reservada de C que indica que los elementos que vienen agrupados a continuación entre llaves componen una estructura.<br>
            <strong>nombre_estructura</strong>: identifica el tipo de dato que se describe y del cual se podrán declarar variables. Se especifica entre corchetes para indicar su opcionalidad.<br>
            <strong>miembro1, miembro2,...</strong>: Son los elementos que componen la estructura de datos, deben ser precedidos por el tipo_dato al cual pertenecen.</p>
         <h2>Ejemplo</h2>
           <pre class="pre1">
-          struct Persona {
-          char Nombre[65];
-          char Direccion[65];
-          int AnyoNacimiento;
-          } Fulanito;
+struct Persona {
+char Nombre[65];
+char Direccion[65];
+int AnyoNacimiento;
+} Fulanito;
         </pre>
         <h4>Ejemplo de programa</h4>
         <pre>
-          #include "stdio.h"
-          #include "stdlib.h"
-          /*run*/
-            struct persona{
-          	char nom[50];
-          	int edad;
-          	char sexo;
-          } p;
-          void capturar(){
-          	printf("Ingresa el nombre\n");
-          	gets(p.nom);
-          	printf("Ingresa la edad\n");
-          	scanf("%i", &p.edad);
-          	printf("Ingresa el sexo\n");
-          	fflush(stdin);
-          	scanf("%c", &p.sexo);
+  #include "stdio.h"
+  #include "stdlib.h"
+  /*run*/
+  struct persona{
+  char nom[50];
+  int edad;
+  char sexo;
+} p;
+  void capturar(){
+  printf("Ingresa el nombre\n");
+  gets(p.nom);
+  printf("Ingresa la edad\n");
+  scanf("%i", &p.edad);
+  printf("Ingresa el sexo\n");
+  fflush(stdin);
+  scanf("%c", &p.sexo);
           }
           void imprimir(){
-          	printf("Nombre: %s\n", p.nom);
-          	printf("Edad: %i\n", p.edad);
-          	printf("Sexo: %c\n", p.sexo);
+  printf("Nombre: %s\n", p.nom);
+  printf("Edad: %i\n", p.edad);
+  printf("Sexo: %c\n", p.sexo);
           }
           int main(int argc, char *argv[]) {
-          	capturar();
-          	imprimir();
-          	system("PAUSE");
+  capturar();
+  imprimir();
+  system("PAUSE");
           }
         </pre>
         <hr>
@@ -202,71 +202,71 @@
         Una union se declara con el mismo formato de una struct. Primero declaramos
         el tipo union y luego declaramos variables de ese tipo.
         <pre class="pre1">
-           union [nombre_de_la_union] {
-           [tipo][miembro1]
-           [tipo][miembro2]
-           [tipo][miembro3]
-           }[NombreVariable];
+  union [nombre_de_la_union] {
+  [tipo][miembro1]
+  [tipo][miembro2]
+  [tipo][miembro3]
+  }[NombreVariable];
          </pre>
           <h2>Ejemplo</h2>
           <pre class="pre1">
-            union Valores{
-            int ival;
-            float fval;
-            float sval;
-            };
+  union Valores{
+  int ival;
+  float fval;
+  float sval;
+  };
           </pre>
           <br>
           <h4>Ejemplo de programa</h4>
           <pre class="pre1">
-          #include "stdio.h"
-          #include "string.h"
+  #include "stdio.h"
+  #include "string.h"
 
-          /*Creamos una union*/
-          union frases
-          {
-          	char mensajes[50];
-          	char ayudas[50];
-          	char lineas[50];
-          } palabra;
+  /*Creamos una union*/
+  union frases
+  {
+  	char mensajes[50];
+  	char ayudas[50];
+    char lineas[50];
+  } palabra;
 
-          /*Creamos una estructura*/
-          struct comparte
-          {
-          	char mensajes[50];
-          	char ayudas[50];
-          	char lineas[50];
-          }Sistema;
+  /*Creamos una estructura*/
+  struct comparte
+  {
+    char mensajes[50];
+    char ayudas[50];
+    char lineas[50];
+  }Sistema;
 
-          int main(int argc, char** argv)
-          {
-          	/*Inicializamos*/
-          	strcpy(palabra.mensajes, "Primer Mensaje");
+  int main(int argc, char** argv)
+  {
+    /*Inicializamos*/
+    strcpy(palabra.mensajes, "Primer Mensaje");
 
-          	/*Inicializamos*/
-          	strcpy(palabra.ayudas, "Una Ayuda");
+    /*Inicializamos*/
+    strcpy(palabra.ayudas, "Una Ayuda");
 
-          	printf("\nFrases en Union: ");
+    printf("\nFrases en Union: ");
 
-          	/*Imprimimos mensajes de union*/
-          	printf("\n1- %s", palabra.mensajes);
+    /*Imprimimos mensajes de union*/
+    printf("\n1- %s", palabra.mensajes);
 
-          	/*Imprimimos ayudas de union*/
+    /*Imprimimos ayudas de union*/
           	printf("\n2- %s", palabra.ayudas);
 
-          	/*Inicializamos*/
-          	strcpy(Sistema.mensajes, "Primer Mensaje");
+    /*Inicializamos*/
+    strcpy(Sistema.mensajes, "Primer Mensaje");
 
-          	/*Inicializamos*/
-          	strcpy(Sistema.ayudas, "Una Ayuda");
-          	printf("\n\nFrases en Struct: ");
+    /*Inicializamos*/
+    strcpy(Sistema.ayudas, "Una Ayuda");
+    printf("\n\nFrases en Struct: ");
 
-          	/*Imprimimos mensajes de struct*/
-          	printf("\n1- %s", Sistema.mensajes);
+    /*Imprimimos mensajes de struct*/
+    printf("\n1- %s", Sistema.mensajes);
 
-          	/*Imprimimos ayudas de union*/
-          	printf("\n2- %s", Sistema.ayudas);
-          	return 0;
+    /*Imprimimos ayudas de union*/
+    printf("\n2- %s", Sistema.ayudas);
+    return 0;
           }
         </pre>
         <hr>
